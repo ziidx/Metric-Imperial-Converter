@@ -25,7 +25,7 @@ module.exports = function (app) {
       return res.send('invalid unit');
     }
 
-    const returnNum = Number(convertHandler.convert(initNum, initUnit)); //Return as number to pass functional tests
+    const returnNum = convertHandler.convert(initNum, initUnit);
     const returnUnit = convertHandler.getReturnUnit(initUnit);
     const returnString = convertHandler.getString(initNum, initUnit, returnNum, returnUnit);
 

@@ -81,32 +81,32 @@ suite('Unit Tests', function(){
 
     suite('Function convertHandler.convert(input)', () => {
         test('Convert gal to L', (done) => {
-            assert.equal(convertHandler.convert(3, 'gal'), 11.35623, 0.1);
+            assert.approximately(convertHandler.convert(3, 'gal'), 11.35623, 0.1);
             done();
         });
 
         test('Convert L to gal', (done) => {
-            assert.equal(convertHandler.convert(6, 'l'), 1.58502, 0.1);
+            assert.approximately(convertHandler.convert(6, 'l'), 1.58502, 0.1);
             done();
         });
 
         test('Convert mi to km', (done) => {
-            assert.equal(convertHandler.convert(10, 'mi'), 16.0934, 0.1);
+            assert.approximately(convertHandler.convert(10, 'mi'), 16.0934, 0.1);
             done();
         });
 
         test('Convert km to mi', (done) => {
-            assert.equal(convertHandler.convert(7.2, 'km'), 4.47386, 0.1);
+            assert.approximately(convertHandler.convert(7.2, 'km'), 4.47386, 0.1);
             done();
         });
 
         test('Convert lbs to kg', (done) => {
-            assert.equal(convertHandler.convert(4.5, 'lbs'), 2.04115, 0.1);
+            assert.approximately(convertHandler.convert(4.5, 'lbs'), 2.04116, 0.1);
             done();
         });
 
         test('Convert kg to lbs', (done) => {
-            assert.equal(convertHandler.convert(12, 'kg'), 26.45544, 0.1);
+            assert.approximately(convertHandler.convert(12, 'kg'), 26.45544, 0.1);
             done();
         });
     });

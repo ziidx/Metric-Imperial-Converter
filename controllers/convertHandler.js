@@ -2,7 +2,7 @@ function ConvertHandler() {
   const units = {
     gal: {name: 'gallon(s)', rUnit: 'L', ratio: 3.78541},
     l: {name: 'L', rUnit: 'gal', ratio: 0.26417},
-    lbs: {name: 'pound(s)', rUnit: 'kg', ratio: 0.45359},
+    lbs: {name: 'pound(s)', rUnit: 'kg', ratio: 0.453592},
     kg: {name: 'kilogram(s)', rUnit: 'lbs', ratio: 2.20462},
     mi: {name: 'mile(s)', rUnit: 'km', ratio: 1.60934},
     km: {name: 'kilometer(s)', rUnit: 'mi', ratio: 0.62137}
@@ -54,7 +54,7 @@ function ConvertHandler() {
   this.convert = function(initNum, initUnit) {
     let result = units[initUnit.toLowerCase()].ratio * initNum;
     
-    return result.toFixed(5);
+    return Number(result.toFixed(5));
   };
   
   this.getString = function(initNum, initUnit, returnNum, returnUnit) {
